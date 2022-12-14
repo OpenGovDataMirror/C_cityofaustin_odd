@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<section class="page-photo-header-about center-xs"></section>
+<section class="page-section" id="about-odd">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+<!--         <div class="row">
+          <div class="col-xs"><img src="{{ site.baseurl }}/assets/img/team-at-faulk.jpg" alt="Office of Design and Delivery Team at Work"></div>
+        </div> -->
+        <div class="row">
+          <div class="col-xs"><h2>{{ page.secondary_headline }}</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+
+          <h4>We launched the Office of Design &amp; Delivery in May 2018 to scale Austin's capacity for designing and delivering the best possible services for our residents. We heard terms like "agile" being used in conversation, and wanted to show what it looks like in practice.</h4>
+
+          <h4>Our culture was our strongest asset. We believe that work should be fun, that learning is ongoing, and that everyone has something to teach. We asked for help, defaulted to action, and balanced short-term wins with long-term outcomes. We had strong opinions, loosely held, and were open by default.</h4>
+
+          <h4><a href="/how-we-work/">Learn about how we worked</a>.</h4>
+
+          <h4>We're still interested in hearing from residents, sharing our work, and connecting with other folks in the civic space. Check out our alumni below, and find us on Twitter, Linkedin, Medium, and many other corners of the internet.
+            <br/>
+            <br/>
+            </h4>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="row">
+
+          <div class="col-xs">
+            <h4>&nbsp;</h4>
+            <h2>Our story</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <h4>We started with an experiment. Building on learnings from the <a href="https://consumerfinance.gov">Consumer Financial Protection Bureau</a>, <a href="https://18f.gsa.gov">18F</a>, and the <a href="https://usds.gov">U.S. Digital Service</a>, we launched the City of Austin’s <a href="http://austintexas.gov/innovation-fellows">Design, Technology &amp; Innovation Fellows</a> program in Summer 2016 to “bring the principles, values, and practices of the technology sector into government.”</h4>
+
+            <p><img src="{{ site.baseurl }}/assets/img/first-fellows-website.png" alt="The first version of our recruiting website, forked from NYC TechJobs"></p>
+
+            <h4>Over the next four years, we hired over 85 design and technology specialists to improve services around <a href="https://permittingatx.com">permitting</a>, <a href="http://projects.austintexas.io/projects/vision-zero-waste/about/overview/">recycling</a>, <a href="http://www.fox7austin.com/news/local-news/city-launches-pilot-program-that-aims-to-bring-homeless-austinites-weekly-trash-service">homelessness</a>, and <a href="https://floods.austintexas.io/map">public safety</a>. We introduced new practices for user research, service design, content strategy, engineering, and product management, and we launched Austin’s first Digital Transformation Strategy with a modular platform at <a href="https://alpha.austin.gov">alpha.austin.gov</a>.</h4>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+            <section class="page-photo-header-about-joy center-xs"></section>
+
+
+<section class="page-section" id="about-odd">
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="row">
+              <div class="col-xs">
+
+            <h4>In May 2018, we became the Office of Design & Delivery, creating a dedicated practice within Austin's Communications &amp; Technology Management Department to lead design, development, and product strategy for <a href="http://alpha.austin.gov">Austin.gov</a>, our <a href="/service-design/">Service Design Lab</a>, and city-wide efforts to be a <a href="https://apolitical.co/solution_article/smart-cities-must-get-smarter/">smarter city</a>.</h4>
+
+            <h4>In October 2020, we worked with leadership to embed our oddities within the existing capacities of the City of Austin. Our pilot was a success in introducing and formalizing new practices, policy, and position descriptions around user research, service design, content strategy, and open-source web development, and we'll continue to work to raise the bar for how Austin can deliver the best possible services for our residents.</h4>
+
+            <h4>Our mascot is, and forever will be, the <a href="/love-chicken/">love chicken</a>, because we love chickens, and we believe that working in government, at its best, is filled with love.</h4>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<div id="team">
+{% assign staff = site.people | where: "role", "staff" | sort: "start_date"  %}
+{% include page-section--people.html
+  section_headline=page.staff_section_headline
+  people=staff
+  section_theme="gray" %}
+</div>
+
+{% assign press_mentions = site.press | sort_by: "date" | reverse %}
+{% include page-section--press.html
+  section_headline=page.press_mentions_headline
+  section_lede=page.press_mentions_lede_markdown
+  items=press_mentions
+  rows=2
+  button_text=page.press_mentions_button_text
+  button_path=page.press_mentions_button_path %}
